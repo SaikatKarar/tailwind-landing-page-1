@@ -1,10 +1,17 @@
 import React from 'react'
+import Navbar from './component/Navbar/Navbar'
+import HeroSection from './component/HeroSection/HeroSection'
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <>
+      <Navbar />
+      //  Main
+      <main class="mt-10">
+        {/* Hero section */}
+        <HeroSection />
+      </main>
+    </>
   )
 }
 
