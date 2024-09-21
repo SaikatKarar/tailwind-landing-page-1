@@ -7,9 +7,9 @@ function App() {
     <>
       <Navbar />
       //  Main
-      <main class="mt-10">
+      <main className="mt-10">
         {/* Hero section */}
-        <HeroSection />
+        {/* <HeroSection /> */}
       </main>
     </>
   )
