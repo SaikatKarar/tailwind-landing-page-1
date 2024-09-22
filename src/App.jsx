@@ -6,10 +6,10 @@ function App() {
   return (
     <>
       <Navbar />
-      //  Main
+      // ----  Main ----
       <main className="mt-10">
-        {/* Hero section */}
-        {/* <HeroSection /> */}
+        {/* ---- Hero section ---- */}
+        <HeroSection />
       </main>
     </>
   )

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import logo from '../../assets/asset_0.png';
-import asset_1 from '../../assets/asset_1.svg';
+import logo from '../../assets/asset 0.png';
+import asset_1 from '../../assets/asset 1.svg';
 import { ArrowRightIcon, Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/20/solid';
 import { navigation } from '../constants';
 
