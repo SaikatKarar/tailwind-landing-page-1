@@ -1,7 +1,6 @@
 import React from 'react'
 import { ArrowRightIcon, CodeBracketSquareIcon, ComputerDesktopIcon, HandRaisedIcon } from '@heroicons/react/20/solid'
-import asset_2 from '../../assets/asset 2.svg';
-import { companiesLine1, companiesLine2, companiesLine3 } from '../constants';
+import CompaniesContainer from '../CompaniesContainer/CompaniesContainer'
 
 const HeroSection = () => {
     return (
@@ -34,46 +33,8 @@ const HeroSection = () => {
                     <button className="px-8 py-3 font-semibold rounded-lg bg-white border border-gray-400 hover:border-gray-800">Read Docs</button>
                 </div>
             </div>
-            <div id="companies-container" className="flex flex-col gap-10">
-                <div id="companies-title" className="flex justify-center gap-2">
-                    <img className="translate-y-2" src={asset_2} alt="" />
-                    <span className="font-semibold">APPS POWERED BY TODESKTOP</span>
-                    <img className="-scale-x-100 translate-y-2" src={asset_2} alt="" />
-                </div>
-                <div id="lines-group" className="flex flex-col gap-4">
 
-                    {/* Line 1 */}
-                    <div id="line1" className="flex gap-4 w-screen -translate-x-48 transition-transform ease-linear">
-                        {companiesLine1.map((company, index) => (
-                            <div key={index} className="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
-                                <img src={company.imgSrc} className="w-12 h-12 md:w-16 md:h-16" alt={company.name} />
-                                <span className="text-[12px] font-semibold lg:text-[16px]">{company.name}</span>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Line 2 */}
-                    <div id="line2" className="flex gap-4 w-screen -translate-x-36 transition-transform ease-linear">
-                        {companiesLine2.map((company, index) => (
-                            <div key={index} className="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
-                                <img src={company.imgSrc} className="w-12 h-12 md:w-16 md:h-16" alt={company.name} />
-                                <span className="text-[12px] font-semibold lg:text-[16px]">{company.name}</span>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Line 3 */}
-                    <div id="line3" className="flex md:hidden gap-4 w-screen -translate-x-48 transition-transform ease-linear">
-                        {companiesLine3.map((company, index) => (
-                            <div key={index} className="flex flex-col justify-center gap-2 items-center min-w-24 min-h-24 bg-white rounded-xl border border-gray-300 md:min-h-32 md:min-w-32">
-                                <img src={company.imgSrc} className="w-12 h-12 md:w-16 md:h-16" alt={company.name} />
-                                <span className="text-[12px] font-semibold lg:text-[16px]">{company.name}</span>
-                            </div>
-                        ))}
-                    </div>
-
-                </div>
-            </div>
+            <CompaniesContainer />
         </div>
     )
 }

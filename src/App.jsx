@@ -10,6 +10,7 @@ function App() {
       <main className="mt-10">
         {/* ---- Hero section ---- */}
         <HeroSection />
+        <div className='h-[1000px]'></div>
       </main>
     </>
   )
