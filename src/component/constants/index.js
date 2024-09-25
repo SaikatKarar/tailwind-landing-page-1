@@ -22,6 +22,7 @@ import assets_23 from '../../assets/asset 23.png';
 import assets_24 from '../../assets/asset 24.png';
 import assets_25 from '../../assets/asset 25.png';
 import assets_26 from '../../assets/asset 26.png';
+import assets_66 from '../../assets/asset 66.svg';
 
 
 
@@ -97,5 +98,29 @@ export const navigation = [
         title: "Login",
         url: "#login",
         // onlyMobile: true,
+    }
+];
+
+export const stepsData = [
+    {
+        step: 'Step 1',
+        title: 'Bootstrap straight from your web app',
+        description: 'Copy and paste your web app url into ToDesktop. Customise your app design, app icon and window frame UI with no code.',
+        features: ['Multiple windows', 'Multiple windows', 'Multiple windows', 'Multiple windows', 'Multiple windows', 'Multiple windows'],
+        image: assets_66
+    },
+    {
+        step: 'Step 2',
+        title: 'Bootstrap straight from your web app',
+        description: 'Copy and paste your web app url into ToDesktop. Customise your app design, app icon and window frame UI with no code.',
+        features: ['Multiple windows', 'Multiple windows', 'Multiple windows', 'Multiple windows', 'Multiple windows', 'Multiple windows'],
+        image: assets_66
+    },
+    {
+        step: 'Step 3',
+        title: 'Bootstrap straight from your web app',
+        description: 'Copy and paste your web app url into ToDesktop. Customise your app design, app icon and window frame UI with no code.',
+        features: ['Multiple windows', 'Multiple windows', 'Multiple windows', 'Multiple windows', 'Multiple windows', 'Multiple windows'],
+        image: assets_66
     }
 ];
