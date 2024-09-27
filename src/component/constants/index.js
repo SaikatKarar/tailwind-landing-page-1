@@ -23,6 +23,10 @@ import assets_24 from '../../assets/asset 24.png';
 import assets_25 from '../../assets/asset 25.png';
 import assets_26 from '../../assets/asset 26.png';
 import assets_66 from '../../assets/asset 66.svg';
+import assets_37 from '../../assets/asset 37.png';
+import assets_38 from '../../assets/asset 38.png';
+import assets_39 from '../../assets/asset 39.png';
+import assets_40 from '../../assets/asset 40.png';
 
 
 
@@ -122,5 +126,50 @@ export const stepsData = [
         description: 'Copy and paste your web app url into ToDesktop. Customise your app design, app icon and window frame UI with no code.',
         features: ['Multiple windows', 'Multiple windows', 'Multiple windows', 'Multiple windows', 'Multiple windows', 'Multiple windows'],
         image: assets_66
+    }
+];
+
+export const featureGridItems = [
+    {
+        title: "Native Notifications",
+        description: "",
+        imgSrc: assets_37,
+        rowStart: 1,
+        rowEnd: 3
+    },
+    {
+        title: "Native Notifications",
+        description: "We’ll ensure the underlying browser is up to date and deliver performance improvements, security patches, & additional features.",
+        imgSrc: assets_38,
+        rowStart: 1,
+        rowEnd: 4
+    },
+    {
+        title: "Native Notifications",
+        description: "",
+        imgSrc: assets_39,
+        rowStart: 1,
+        rowEnd: 3
+    },
+    {
+        title: "Native Notifications",
+        description: "We’ll ensure the underlying browser is up to date and deliver performance improvements, security patches, & additional features.",
+        imgSrc: assets_40,
+        rowStart: 3,
+        rowEnd: 6
+    },
+    {
+        title: "Native Notifications",
+        description: "",
+        imgSrc: assets_37,
+        rowStart: 4,
+        rowEnd: 6
+    },
+    {
+        title: "Native Notifications",
+        description: "We’ll ensure the underlying browser is up to date and deliver performance improvements, security patches, & additional features.",
+        imgSrc: assets_38,
+        rowStart: 3,
+        rowEnd: 6
     }
 ];

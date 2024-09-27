@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './component/Navbar/Navbar'
 import HeroSection from './component/HeroSection/HeroSection'
 import StepCard from './component/StepCard/StepCard'
+import FeatureGridSection from './component/FeatureGridSection/FeatureGridSection'
 
 function App() {
   return (
@@ -11,8 +12,11 @@ function App() {
       <main className="mt-10">
         {/* ---- Hero section ---- */}
         <HeroSection />
-        {/* <div className='h-[1000px]'></div> */}
+
         <StepCard />
+        <FeatureGridSection />
+
+        <div className='h-[1000px]'></div>
       </main>
     </>
   )

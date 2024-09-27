@@ -4,7 +4,7 @@ import { CheckIcon } from '@heroicons/react/20/solid'
 
 const StepCard = () => {
     return (
-        <div id="steps" className="flex flex-col gap-6 container mx-auto mt-20">
+        <div id="steps" className="flex flex-col gap-6 container">
             <h2 className="text-5xl sm:font-semibold mb-14">How it works</h2>
             {stepsData.map((stepData, index) => (
                 <div key={index} className="rounded-xl border px-8 py-12 flex flex-col lg:flex-row justify-between">
