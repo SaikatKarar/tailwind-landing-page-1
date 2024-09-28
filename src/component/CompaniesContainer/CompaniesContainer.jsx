@@ -1,32 +1,17 @@
-import React, { useEffect, useRef } from 'react';
-import asset_2 from '../../assets/asset 2.svg';
+import React, { useRef, useEffect } from 'react';
+import { useScroll } from '../ScrollProvider/ScrollProvider';
+import assets_2 from '../../assets/asset 2.svg';
 import { companiesLine1, companiesLine2, companiesLine3 } from '../constants';
 
-const initialTranslateLTR = -48 * 4;
-const initialTranslateRTL = 36 * 4;
-
 function CompaniesContainer() {
+    const { scrollSettings, scrollHandler } = useScroll(); // Get settings and handler from context
+
     // Create refs for the lines
     const line1Ref = useRef(null);
     const line2Ref = useRef(null);
     const line3Ref = useRef(null);
 
-    // Define scrollHandler outside of the setupIntersectionObserver
-    const scrollHandler = (element, isLTR, speed) => () => {
-        const translateX = (window.innerHeight - element.getBoundingClientRect().top) * speed;
-        let totalTranslate = 0;
-
-        if (isLTR) {
-            totalTranslate = translateX + initialTranslateLTR;
-        } else {
-            totalTranslate = -(translateX + initialTranslateRTL);
-        }
-
-        element.style.transform = `translateX(${totalTranslate}px)`;
-    };
-
     useEffect(() => {
-        // Setup intersection observers when component mounts
         const line1Element = line1Ref.current;
         const line2Element = line2Ref.current;
         const line3Element = line3Ref.current;
@@ -43,28 +28,29 @@ function CompaniesContainer() {
                 }
             };
 
-            const intersectionObserver = new IntersectionObserver(intersectionCallback);
-            intersectionObserver.observe(element);
+            const observer = new IntersectionObserver(intersectionCallback);
+            observer.observe(element);
         };
 
-        setupIntersectionObserver(line1Element, true, 0.15);
-        setupIntersectionObserver(line2Element, false, 0.15);
-        setupIntersectionObserver(line3Element, true, 0.15);
+        // Setting up for all lines
+        setupIntersectionObserver(line1Element, scrollSettings.isLTR, scrollSettings.speed);
+        setupIntersectionObserver(line2Element, !scrollSettings.isLTR, scrollSettings.speed);
+        setupIntersectionObserver(line3Element, scrollSettings.isLTR, scrollSettings.speed);
 
-        // Clean up the event listener when the component unmounts
+        // Clean up event listeners when component unmounts
         return () => {
-            document.removeEventListener('scroll', scrollHandler(line1Element, true, 0.15));
-            document.removeEventListener('scroll', scrollHandler(line2Element, false, 0.15));
-            document.removeEventListener('scroll', scrollHandler(line3Element, true, 0.15));
+            document.removeEventListener('scroll', scrollHandler(line1Element, scrollSettings.isLTR, scrollSettings.speed));
+            document.removeEventListener('scroll', scrollHandler(line2Element, !scrollSettings.isLTR, scrollSettings.speed));
+            document.removeEventListener('scroll', scrollHandler(line3Element, scrollSettings.isLTR, scrollSettings.speed));
         };
-    }, []);
+    }, [scrollHandler, scrollSettings]);
 
     return (
         <div id="companies-container" className="flex flex-col gap-10 overflow-y-hidden overflow-x-hidden">
             <div id="companies-title" className="flex justify-center gap-2">
-                <img className="translate-y-2" src={asset_2} alt="" />
+                <img className="translate-y-2" src={assets_2} alt="" />
                 <span className="font-semibold">APPS POWERED BY TODESKTOP</span>
-                <img className="-scale-x-100 translate-y-2" src={asset_2} alt="" />
+                <img className="-scale-x-100 translate-y-2" src={assets_2} alt="" />
             </div>
 
             <div id="lines-group" className="flex flex-col gap-4">

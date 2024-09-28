@@ -35,11 +35,11 @@ const FeatureGridSection = () => {
     return (
         <div id="bento-grid" className="container">
             <h2 className="text-5xl sm:font-semibold mb-14 max-w-2xl leading-normal">ToDesktop handles the details</h2>
-            <div id="grid-container" className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" style={{ gridAutoRows: "96px" }}>
+            <div id="grid-container" className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 " style={{ gridAutoRows: "96px" }}>
                 {featureGridItems.map((item, index) => (
                     <div
                         key={index}
-                        className={`row-start-${item.rowStart || '1'} row-end-${item.rowEnd || '2'} group rounded-2xl p-[1px] gradient-hover-outer`}
+                        className={`row-start-${item.rowStart} row-end-${item.rowEnd} group rounded-2xl p-[1px] gradient-hover-outer`}
                     >
                         <div className="gradient-hover-inner rounded-2xl w-full h-full p-6 flex flex-col gap-6 items-center">
                             <h3 className="text-2xl">{item.title}</h3>

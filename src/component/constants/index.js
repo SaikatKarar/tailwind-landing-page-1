@@ -173,3 +173,43 @@ export const featureGridItems = [
         rowEnd: 6
     }
 ];
+
+export const companiesFeatureLine = [
+    {
+        dot: "•",
+        title: "Download Analytics"
+    },
+    {
+        dot: "•",
+        title: "Custom Menus"
+    },
+    {
+        dot: "•",
+        title: "Multi-window support"
+    },
+    {
+        dot: "•",
+        title: "Trays"
+    },
+    {
+        dot: "•",
+        title: "Deep Linking"
+    },
+    {
+        dot: "•",
+        title: "Download Analytics"
+    },
+    {
+        dot: "•",
+        title: "Launch at startup"
+    },
+    {
+        dot: "•",
+        title: "Offline Support"
+    },
+    {
+        dot: "•",
+        title: "Good Signing"
+    },
+
+];
